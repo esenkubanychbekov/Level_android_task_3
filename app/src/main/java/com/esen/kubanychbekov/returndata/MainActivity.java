@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         button = findViewById(R.id.button);
-        textView = findViewById(R.id.texttView);
         recyclerView = findViewById(R.id.recycler_view);
 
         RecyclerView.LayoutManager manager = new LinearLayoutManager(this);
@@ -45,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == 22){
             if (resultCode == RESULT_OK){
                 String text = data.getStringExtra(SecondActivity.RESULT_KEY);
-                textView.setText(text);
 
                 adapter.data.add(text);
                 adapter.notifyDataSetChanged();
